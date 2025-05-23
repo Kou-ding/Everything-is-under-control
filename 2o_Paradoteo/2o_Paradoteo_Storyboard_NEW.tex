@@ -1,0 +1,390 @@
+\documentclass[hidelinks,titlepage,landscape, 12pt, a4paper]{article}
+
+
+\usepackage{polyglossia}
+\setdefaultlanguage{greek}
+\setotherlanguage{english}
+
+\usepackage{fontspec}
+\setmainfont[
+    Script=Greek,  % Ensures proper Greek rendering
+    Ligatures=TeX, % Standard TeX ligatures (like `` and '')
+]{Courier New}     % Main font for Greek and Latin text
+
+% The "amsmath" package allows the inclusion of mathematica symbols in the LaTeX document
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{subcaption}
+% The "array" package allows the center allignment of columns with wrapped content
+\usepackage{array}
+    \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+%  The "ulem" package allows strikethrough effect in text
+\usepackage{ulem}
+
+% The "graphicx" package allows insertion of images
+\usepackage{graphicx}
+
+% The "subfig" packages allows the use of figures that consist of more than one images
+\usepackage{subfig}
+
+% The "wrapfig" package allows the insertion of images on the side of text and in other custom positions
+\usepackage{wrapfig}
+
+% The "ragged2e" package allows justified text (pliri stixoisi)
+\usepackage[document]{ragged2e}
+
+% The "xcolor" package allows colouring tables
+\usepackage[table,xcdraw]{xcolor}
+
+% The "hyperref" package allows adding links to LaTeX document
+\usepackage{hyperref}
+
+%  The "todonotes" package allows adding nice inline and side notes 
+\usepackage[colorinlistoftodos]{todonotes}\setlength{\marginparwidth}{2.5cm}
+
+% The "tcolorbox" package allows creating coloured boxes of text in the main body of text.
+\usepackage[most]{tcolorbox}
+        \newtcolorbox {theorem} [2] []{colback=green!5,colframe=green!35!black,colbacktitle=green!35!black,fonttitle=\bfseries,enhanced,attach boxed title to top left={yshift=-2mm,xshift=-7mm},width=.9\textwidth,arc=.7mm, title={#2},#1}%{th}
+        
+        \newtcolorbox {defn} [2] []{colback=blue!5,colframe=cyan!35!black,colbacktitle=blue!35!black,fonttitle=\bfseries,enhanced, attach boxed title to top left= {yshift=-2mm,xshift=-2mm}, title={#2},#1}%{def}
+
+        \newtcolorbox {note} [2] []{colback=yellow!10!white,colframe=red!75!black,colbacktitle=red!75!black,fonttitle=\bfseries,enhanced, attach boxed title to top left= {yshift=-2mm,xshift=-2mm}, title={#2},#1}%{note}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Page layout settings %%%%%%%%%%
+% The "geometry" package allows the formating of the writable space in a page
+\usepackage{geometry}
+        \geometry{
+            a4paper,
+            total={150mm,247mm},
+            left=30mm,
+            top=30mm
+        }
+
+% The "parindent"  package allows setting the paragraph indent of the document (i.e. the empty space at the beggining of each paragraph)
+\parindent=20pt
+% By default, TeX indents the first line of each paragraphs by 20pt
+\usepackage{parskip}
+\parskip=3.5pt
+
+% The "relsize"  package allows using font sizes larger than 'Huge'  and smaller than 'tiny'
+\usepackage{relsize}
+        %The "\renewcommand\RSlargest" command sets the maximum font size allowed by the 'relsize '  package
+        \renewcommand\RSlargest{75pt}
+
+%%%%%%%%%%  End - Page layout settings %%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The "float" package allows the placement of figures, images etc. in specific places in between text
+\usepackage{float}
+
+% The "afterpage" package allows the insertion of blank pages (eg. a blank page after the 'titlepage')
+\usepackage{afterpage}
+        \newcommand\blankpage{%
+            \null
+            \thispagestyle{empty}%
+            %\addtocounter{page}{-1}%
+            \newpage}
+
+
+% The "mathtools"  package allows  the insertion of text, formulas etc. above arrows (=> etc.) in mathematical expressions
+\usepackage{mathtools}
+
+% The "mathrsfs" package allows the use of curly math letters, like the Lagrange 'L'
+\usepackage{ mathrsfs }
+
+% The "cancel" package allows diagonal arrow-kind-strikethrough in math expressions
+        %\usepackage{cancel}
+\usepackage[makeroom]{cancel}
+    \makeatletter
+    % #1, #2 offset of label   #6 extra width to clear arrowhead
+    % #3, #4 vector direction  #7 superscript label style
+    % #5 vector width          #8 superscript label
+    \def\cantox@vector#1#2#3#4#5#6#7#8{%
+        \dimen@.5\p@
+        \setbox\z@\vbox{\boxmaxdepth.5\p@
+        \hbox{\kern-1.2\p@\kern#1\dimen@$#7{#8}\m@th$}}%
+    \ifx\canto@fil\hidewidth  \wd\z@\z@ \else \kern-#6\unitlength \fi
+        \ooalign{%
+        \canto@fil$\m@th \CancelColor
+        \vcenter{\hbox{\dimen@#6\unitlength \kern\dimen@
+            \multiply\dimen@#4\divide\dimen@#3 \vrule\@depth\dimen@\@width\z@
+            \vector(#3,-#4){#5}%
+    }}_{\raise-#2\dimen@\copy\z@\kern-\scriptspace}$%
+        \canto@fil \cr
+        \hfil \box\@tempboxa \kern\wd\z@ \hfil \cr}}
+    \def\bcancelto#1#2{\let\canto@vector\cantox@vector\cancelto{#1}{#2}}
+    \makeatother
+
+% The "tabto" package allows the use of the regular 'Tab' funcionality of inserting empty space
+\include{tabto}
+
+
+% The "amssymb" package allows the use of yet more mathematical symbols
+\usepackage{amssymb}
+
+%The "enumitem" package allows the use of lists numbered alphabetically etc.
+\usepackage{enumitem}
+
+%The "diagbox", "color", "vcell", "adjustbox" packages allow custom adjustments to tables
+\usepackage{diagbox}
+\usepackage{color}
+\usepackage{vcell}
+\usepackage{adjustbox}
+
+%The "changepage" package allows the ????????
+\usepackage{changepage} 
+
+%The "unicode-math" package allows the use of more Greek symbols in equations
+\usepackage{unicode-math}
+
+%tables
+\usepackage{multirow}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{colortbl}
+
+%The following two commands allow the numbering of \paragraphs and their inclusion in the Table of Contents.
+% further explanation: https://tex.stackexchange.com/questions/186981/is-there-a-subsubsubsection-command
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+
+%The "gensymb" package allows the insertion of the 'degree' symbol
+\usepackage{gensymb}
+
+%The "xfrac" package allows the insertion of 'diagonal' fraction 
+\usepackage{xfrac}
+
+%The "multicol" package allows the insertion of lists with more than one columns
+\usepackage{multicol}
+
+
+\usepackage{float}  % Adds the [H] positioning specifier
+
+\begin{document}
+
+\begin{titlepage}
+\centering  
+\begin{center}
+    
+    \begin{figure}[H]
+        \vspace{-1cm}
+        \centering
+        \includegraphics[width=8cm]{Images/AUTH_Banner.png}
+    \end{figure}
+
+    \vspace{1cm}               
+    \Huge
+    
+    \hspace{-1cm}\textlarger[4]{ Τ}\textlarger[1.5]{ΗΛΕΟΠΤΙΚΑ }\textlarger[4]{Σ}\textlarger[1.5]{ΥΣΤΗΜΑΤΑ}  
+    
+            
+    \vspace{1cm}
+    \Huge
+    \textbf{"ΟΛΑ ΕΙΝΑΙ ΥΠΟ ΕΛΕΓΧΟ"}
+    
+    \LARGE
+    \vspace{1cm}
+    \textbf{2ο Παραδοτέο}\\
+    - Storyboard -
+            
+    \vspace{1cm}
+    \large
+    \vspace{0.2cm}
+    Καρατζάς Αθανάσιος, ΑΕΜ 10514\\
+    \vspace{0.2cm}
+    Παναπακίδης Δημήτριος, ΑΕΜ 9298\\
+    \vspace{0.2cm}
+    Παπαδάκης Κωνσταντίνος Φώτιος, ΑΕΜ 10371\\
+    \vspace{0.2cm}
+    Παρασκευοπούλου Άννα, ΑΕΜ 10238\\
+    \vspace{0.2cm}
+    Χατζηγεωργίου Αδάμ, ΑΕΜ 9844 
+            
+    \large
+    Τμήμα Ηλεκτρολόγων Μηχανικών και Μηχανικών Υπολογιστών ΑΠΘ\\
+    Δευτέρα 31 Μαρτίου 2025
+            
+\end{center}
+\date{Εαρινό Εξάμηνο 2024-2025}
+
+%\afterpage{\blankpage} % Inserting a blank page after titlepage
+
+\end{titlepage}
+
+\justifying
+\setcounter{page}{2} % Because this is actually page 3
+%\afterpage{\blankpage} % Inserting a blank page
+
+\newpage
+
+\begin{figure}[H]
+
+    \includegraphics[width=30.5cm]{Images/Storyboard_1.jpg}
+    \label{fig:Storyboard_1}
+\end{figure}
+
+
+
+\newpage
+
+\begin{figure}[H]
+    \vspace{-2.5cm}
+    \hspace{-3.5cm}
+    \includegraphics[width=30.5cm]{Images/Storyboard_2.jpg}
+    \label{fig:Storyboard_2}
+\end{figure}
+
+
+
+\newpage
+
+\begin{figure}[H]
+    \vspace{-2.5cm}
+    \hspace{-3.5cm}
+    \includegraphics[width=30.5cm]{Images/Storyboard_3.jpg}
+    \label{fig:Storyboard_3}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+        \vspace{-2.5cm}
+        \hspace{-3.5cm}
+        \includegraphics[angle= -90, width=20cm]{Images/Storyboard_4.jpg}
+        \label{fig:Storyboard_4}
+    \end{figure}
+
+
+
+    \newpage
+
+\begin{figure}[H]
+        \vspace{-2.5cm}
+        \hspace{-3.5cm}
+        \includegraphics[angle= -90, width=20cm]{Images/Storyboard_5.jpg}
+        \label{fig:Storyboard_5}
+    \end{figure}
+
+
+
+
+    \newpage
+
+\begin{figure}[H]
+        \vspace{-2.5cm}
+        \hspace{-3.5cm}
+        \includegraphics[angle= -90, width=20cm]{Images/Storyboard_6.jpg}
+        \label{fig:Storyboard_6}
+    \end{figure}
+
+
+
+    \newpage
+
+\begin{figure}[H]
+        \vspace{-2.5cm}
+        \hspace{-3.5cm}
+        \includegraphics[angle= -90, width=20cm]{Images/Storyboard_7.jpg}
+        \label{fig:Storyboard_7}
+    \end{figure}
+
+
+
+    \newpage
+
+\begin{figure}[H]
+        \vspace{-2.5cm}
+        \hspace{-3.5cm}
+        \includegraphics[angle= -90, width=20cm]{Images/Storyboard_8.jpg}
+        \label{fig:Storyboard_8}
+    \end{figure}
+
+
+
+
+    \newpage
+
+\begin{figure}[H]
+        \vspace{-2.5cm}
+        \hspace{-3.5cm}
+        \includegraphics[angle= -90, width=20cm]{Images/Storyboard_9.jpg}
+        \label{fig:Storyboard_9}
+    \end{figure}
+
+
+
+    \newpage
+
+\begin{figure}[H]
+        \vspace{-2.5cm}
+        \hspace{-3.5cm}
+        \includegraphics[angle= -90, width=20cm]{Images/Storyboard_10.jpg}
+        \label{fig:Storyboard_10}
+    \end{figure}
+
+
+
+    \newpage
+
+\begin{figure}[H]
+        \vspace{-1cm}
+        \hspace{-1.5cm}
+        \includegraphics[angle= -90, width=18cm]{Images/Storyboard_11.jpg}
+        \label{fig:Storyboard_11}
+    \end{figure}
+
+
+
+    \newpage
+
+\begin{figure}[H]
+        \vspace{-2.5cm}
+        \hspace{-3.5cm}
+        \includegraphics[angle= -90, width=20cm]{Images/Storyboard_12.jpg}
+        \label{fig:Storyboard_12}
+    \end{figure}
+
+
+
+    \newpage
+
+\begin{figure}[H]
+        \vspace{-2.5cm}
+        \hspace{-3.5cm}
+        \includegraphics[angle= -90, width=20cm]{Images/Storyboard_13.jpg}
+        \label{fig:Storyboard_13}
+    \end{figure}
+
+
+
+    \newpage
+
+\begin{figure}[H]
+        \vspace{-2.5cm}
+        \hspace{-3.5cm}
+        \includegraphics[angle= -90, width=20cm]{Images/Storyboard_14.jpg}
+        \label{fig:Storyboard_14}
+    \end{figure}
+
+
+
+    \newpage
+
+\begin{figure}[H]
+        \vspace{-2.5cm}
+        \hspace{-3.5cm}
+        \includegraphics[angle= -90, width=20cm]{Images/Storyboard_15.jpg}
+        \label{fig:Storyboard_15}
+    \end{figure}
+
+
+
+
+
+
+
+\end{document}

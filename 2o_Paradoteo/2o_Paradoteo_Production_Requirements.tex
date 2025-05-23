@@ -1,0 +1,506 @@
+\documentclass[hidelinks,titlepage, 12pt, a4paper]{article}
+
+\input{preamble.tex}
+% \usepackage{courier}
+
+\usepackage{titlesec} % Required for customizing section titles
+\titleformat{\section}{\normalfont\bfseries\large}{}{0em}{}
+\titleformat{\subsection}{\normalfont\bfseries\large}{}{0em}{}
+\titleformat{\subsubsection}{\normalfont\bfseries\normalsize}{}{0em}{}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+    \vspace{1cm}
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=8cm]{Images/AUTH_Banner.png}
+    \end{figure}
+
+    \vspace{2.5cm}               
+    \Huge
+    
+    \hspace{-1cm}\textlarger[4]{ Τ}\textlarger[1.5]{ΗΛΕΟΠΤΙΚΑ }\textlarger[4]{Σ}\textlarger[1.5]{ΥΣΤΗΜΑΤΑ}  
+    
+            
+    \vspace{2.5cm}
+    \Huge
+    \textbf{"ΟΛΑ ΕΙΝΑΙ ΥΠΟ ΕΛΕΓΧΟ"}
+    
+    \LARGE
+    \vspace{2cm}
+    \textbf{2ο Παραδοτέο}\\
+    - Production Requirements -
+            
+    \vspace{2cm}
+    \Large
+    \vspace{0.2cm}
+    Καρατζάς Αθανάσιος, ΑΕΜ 10514\\
+    \vspace{0.2cm}
+    Παναπακίδης Δημήτριος, ΑΕΜ 9298\\
+    \vspace{0.2cm}
+    Παπαδάκης Κωνσταντίνος Φώτιος, ΑΕΜ 10371\\
+    \vspace{0.2cm}
+    Παρασκευοπούλου Άννα, ΑΕΜ 10238\\
+    \vspace{0.2cm}
+    Χατζηγεωργίου Αδάμ, ΑΕΜ 9844
+            
+    \vfill
+    \Large       
+            
+    \large
+    Τμήμα Ηλεκτρολόγων Μηχανικών και Μηχανικών Υπολογιστών ΑΠΘ\\
+    Δευτέρα 31 Μαρτίου 2025
+            
+\end{center}
+\date{Εαρινό Εξάμηνο 2024-2025}
+
+%\afterpage{\blankpage} % Inserting a blank page after titlepage
+
+\end{titlepage}
+
+\justifying
+\setcounter{page}{2} % Because this is actually page 3
+\tableofcontents
+%\afterpage{\blankpage} % Inserting a blank page
+
+\newpage
+
+
+
+    \centering
+    \Large Production Requirements
+    
+    \normalsize
+    \justifying
+    
+
+    \section{Available Equipment}
+    
+    \noindent \textbf{\uline{\uline{CAMERAS:}}}
+    \begin{itemize}
+        \item Nikon D3300
+            \begin{itemize}
+                \item Lens1: AF-S NIKKOR 55-200mm 1:4-5.6 G II ED
+                \item Lens2: AF-P NIKKOR  18-55mm 1:3.5-5.6 G
+            \end{itemize}
+        \item Canon EOS 250D, Lens: EF-S 18-55mm 1:3.5-5.6
+        \item iPhone 15 Pro Max
+        \item iPhone 12 Pro
+        \item GoPro Hero 5 Session
+
+    \end{itemize}
+
+
+    \vspace{0.5cm}
+    \noindent \textbf{\uline{\uline{ADDITIONAL CAMERA GEAR:}}}
+    \begin{itemize}
+        \item Camera tripods [x3 items]
+    \end{itemize}
+
+
+    \vspace{0.5cm}
+    \noindent \textbf{\uline{\uline{AUDIO:}}}
+    \begin{itemize}
+        \item UR22mkII USB Audio Interface
+        \item Shotgun condenser mic with balanced XLR cable
+        \item Boom pole
+        \item Lapel mic with wireless transmitter and receiver
+        \item Zoom H1 Compact 32-bit Audio Recorder
+        \item Beyerdynamic DT 770 PRO (32 Ohm) dynamic, closed-back headset
+        \item MacBook Air M2, 8 Cores, 16GB, SSD
+        \item Adobe Audition 2023
+        \item Audacity
+    \end{itemize}
+
+
+    \vspace{0.5cm}
+    \noindent \textbf{\uline{\uline{LIGHTING:}}}
+    \begin{itemize}
+        \item Incandescent Light 1000W with diffuser and tripod [x2 items]
+        \item Incandescent Light 500W with tripod [x1 item]
+    \end{itemize}
+
+
+    \vspace{0.5cm}
+    \noindent \textbf{\uline{\uline{PROPS:}}}
+    \begin{itemize}
+        \item Green Screen (AUTH School of Journalism and Mass Communications Studio)
+    \end{itemize}
+
+
+    \vspace{0.5cm}
+    \noindent \textbf{\uline{\uline{POST PRODUCTION:}}}
+    \begin{itemize}
+        \item Adobe Premiere Pro 2023
+        \item Adobe After Effects 2023
+        \item Adobe Audition 2023
+        \item Audacity
+        \item OBS Studio (Open Broadcast Studio)
+        \item Laptop Lenovo i7, 8GB, NVIDIA GeForce GTX 950M (2GB), SSD
+        \item Beyerdynamic DT 770 PRO (32 Ohm) dynamic, closed-back headset
+    \end{itemize}
+
+
+
+
+
+\vspace{2.5cm}
+\section{Sequence 1}
+
+    \vspace{0.2cm}
+    \subsection*{ \uline{\uline{\textbf{Extra} [Breaking News content] }} } 
+    \addcontentsline{toc}{section}{\protect\numberline{}1.1 \hspace{0.1cm} Extra [Breaking News Content]} 
+
+    \begin{itemize}
+        \item \textbf{LOCATION}: AUTH School of Journalism and Mass Communications Studio
+        \item \textbf{CAMERA}:
+            \begin{enumerate}
+                \item Nikon D3300
+                \item iPhone 15 Pro Max
+            \end{enumerate}
+        \item \textbf{AUDIO}: 
+            \begin{enumerate}
+                \item Lapel mic with wireless transmitter and receiver
+                \item UR22mkII USB Audio Interface
+                \item MacBook Air M2, 8 Cores, 16GB, SSD
+                \item Beyerdynamic DT 770 PRO (32 Ohm) dynamic, closed-back headset
+            \end{enumerate}
+        \item \textbf{LIGHTING}:
+            \begin{enumerate}
+                \item Incandescent Light 1000W No.1 with diffuser and tripod [Key Light]
+                \item Incandescent Light 1000W No.2 with diffuser and tripod [Fill Light]
+                \item Incandescent light 500W with tripod [Back Light]
+            \end{enumerate}
+        \item \textbf{PROPS}: Green Screen (AUTH School of Journalism and Mass Communications Studio)   
+    \end{itemize}
+    
+
+    
+    \vspace{0.5cm}
+    \subsection*{ \uline{\uline{\textbf{Scene 1} [Δρόμος της επιστροφής]}} } 
+    \addcontentsline{toc}{section}{\protect\numberline{}1.2 \hspace{0.1cm} Scene 1 [Δρόμος της επιστροφής]}
+    
+    \begin{itemize}
+        \item \textbf{LOCATION}: Streets of downtown Thessaloniki (near Kamara and University)
+        \item \textbf{TIME}: Night
+        \item \textbf{CAMERA}: Canon EOS  250D, Nikon D3300
+        \item \textbf{AUDIO}: 
+            \begin{enumerate}
+                \item Shotgun condenser mic with balanced XLR cable
+                \item Boom pole
+                \item UR22mkII USB Audio Interface
+                \item MacBook Air M2, 8 Cores, 16GB, SSD
+                \item Beyerdynamic DT 770 PRO (32 Ohm) dynamic, closed-back headset
+            \end{enumerate}
+        \item \textbf{LIGHTING}: Natural Street Lighting
+    \end{itemize}
+
+
+    
+    \vspace{0.5cm}
+    \subsection*{ \uline{\uline{\textbf{Scene 2} [Σπίτι]}} }
+    \addcontentsline{toc}{section}{\protect\numberline{}1.3 \hspace{0.1cm} Scene 2 [Σπίτι]}
+    
+    \begin{itemize}
+        \item \textbf{LOCATION}: Private Residence No. 1
+        \item \textbf{CAMERA}: Canon EOS  250D, Nikon D3300
+        \item \textbf{TIME}: Night
+        \item \textbf{AUDIO}: 
+            \begin{enumerate}
+                \item Shotgun condenser mic with balanced XLR cable
+                \item Boom pole
+                \item UR22mkII USB Audio Interface
+                \item MacBook Air M2, 8 Cores, 16GB, SSD
+                \item Beyerdynamic DT 770 PRO (32 Ohm) dynamic, closed-back headset
+            \end{enumerate}
+        \item \textbf{LIGHTING}:
+            \begin{enumerate}
+                \item Incandescent Light 1000W with diffuser and tripod [x2 items]
+                \item Incandescent light 500W with tripod
+            \end{enumerate}  
+    \end{itemize}
+
+
+\vspace{2cm}
+\section{Sequence 2}
+
+    \vspace{0.2cm}
+    \subsection*{ \uline{\uline{\textbf{Scene 1} [Πρωινό ξύπνημα]}} } 
+    \addcontentsline{toc}{section}{\protect\numberline{}2.1 \hspace{0.1cm} Scene 1 [Πρωινό ξύπνημα]}
+
+    \begin{itemize}
+        \item \textbf{LOCATION}: Private Residence No. 1
+        \item \textbf{TIME}: Morning
+        \item \textbf{CAMERA}: Canon EOS  250D, Nikon D3300
+        \item \textbf{AUDIO}: 
+            \begin{enumerate}
+                \item Shotgun condenser mic with balanced XLR cable
+                \item Boom pole
+                \item UR22mkII USB Audio Interface
+                \item MacBook Air M2, 8 Cores, 16GB, SSD
+                \item Beyerdynamic DT 770 PRO (32 Ohm) dynamic, closed-back headset
+            \end{enumerate}
+        \item \textbf{LIGHTING}:
+            \begin{enumerate}
+                \item Incandescent Light 1000W with diffuser and tripod [x2 items]
+                \item Incandescent light 500W with tripod
+            \end{enumerate}  
+    \end{itemize}
+
+    
+
+    \vspace{2cm}
+    \subsection*{ \uline{\uline{\textbf{Scene 2} [Στο δρόμο για  τη σχολή]}} } 
+    \addcontentsline{toc}{section}{\protect\numberline{}2.2 \hspace{0.1cm} Scene 2 [Στο δρόμο για τη σχολή]}
+
+    \begin{itemize}
+        \item \textbf{LOCATION}: Streets of downtown Thessaloniki (near Kamara and University), Thessaloniki Metro, Aristotle University of Thessaloniki
+        \item \textbf{TIME}: Morning
+        \item \textbf{CAMERA}: Canon EOS  250D, Nikon D3300
+        \item \textbf{AUDIO}: 
+            \begin{enumerate}
+                \item Zoom H1 Compact 32-bit Audio Recorder
+                \item Beyerdynamic DT 770 PRO (32 Ohm) dynamic, closed-back headset
+            \end{enumerate}
+        \item \textbf{LIGHTING}: Natural Street Lighting
+    \end{itemize}
+
+    
+    
+    \vspace{0.5cm}
+    \subsection*{ \uline{\uline{\textbf{Scene 3} [Άφιξη στη σχολή]}} } 
+    \item \textbf{TIME}: Morning
+    \addcontentsline{toc}{section}{\protect\numberline{}2.3 \hspace{0.1cm} Scene 3 [Άφιξη στη σχολή]}
+
+    \begin{itemize}
+        \item \textbf{LOCATION}: Aristotle University of Thessaloniki, School of Electrical and Computer Engineering AUTH
+        \item \textbf{CAMERA}: Canon EOS  250D, Nikon D3300
+        \item \textbf{AUDIO}: 
+            \begin{enumerate}
+                \item Zoom H1 Compact 32-bit Audio Recorder
+                \item Shotgun condenser mic with balanced XLR cable
+                \item Boom pole
+                \item UR22mkII USB Audio Interface
+                \item MacBook Air M2, 8 Cores, 16GB, SSD
+                \item Beyerdynamic DT 770 PRO (32 Ohm) dynamic, closed-back headset
+            \end{enumerate}
+        \item \textbf{LIGHTING}: Natural Lighting
+    \end{itemize}
+
+    
+
+    \newpage
+    \subsection*{  \uline{\uline{\textbf{Scene 4} [Πρώτη αλληλεπίδραση]}}  } 
+    \addcontentsline{toc}{section}{\protect\numberline{}2.4 \hspace{0.1cm} Scene 4 [Πρώτη αλληλεπίδραση]}
+
+    \begin{itemize}
+        \item \textbf{LOCATION}: Aristotle University of Thessaloniki, School of Electrical and Computer Engineering AUTH, Lecture Hall A5
+        \item \textbf{TIME}: Morning
+        \item \textbf{CAMERA}: Canon EOS  250D, Nikon D3300
+        \item \textbf{AUDIO}: 
+            \begin{enumerate}
+                \item Shotgun condenser mic with balanced XLR cable
+                \item Boom pole
+                \item UR22mkII USB Audio Interface
+                \item MacBook Air M2, 8 Cores, 16GB, SSD
+                \item Beyerdynamic DT 770 PRO (32 Ohm) dynamic, closed-back headset
+            \end{enumerate}
+        \item \textbf{LIGHTING}: Natural Lighting
+    \end{itemize}
+
+
+
+    \vspace{0.5cm}
+    \subsection*{ \uline{\uline{\textbf{Scene 5} [Δεύτερη αλληλεπίδραση]}} } 
+    \addcontentsline{toc}{section}{\protect\numberline{}2.5 \hspace{0.1cm} Scene 5 [Δεύτερη αλληλεπίδραση]}
+
+    \begin{itemize}
+        \item \textbf{LOCATION}: Aristotle University of Thessaloniki, School of Electrical and Computer Engineering AUTH, Lecture Hall A5
+        \item \textbf{TIME}: Morning
+        \item \textbf{CAMERA}: Canon EOS  250D, Nikon D3300
+        \item \textbf{AUDIO}: 
+            \begin{enumerate}
+                \item Shotgun condenser mic with balanced XLR cable
+                \item Boom pole
+                \item UR22mkII USB Audio Interface
+                \item MacBook Air M2, 8 Cores, 16GB, SSD
+                \item Beyerdynamic DT 770 PRO (32 Ohm) dynamic, closed-back headset
+            \end{enumerate}
+        \item \textbf{LIGHTING}: Natural Lighting
+    \end{itemize}
+    
+
+
+
+    \vspace{0.5cm}
+    \subsection*{ \uline{\uline{\textbf{Scene 6} [Τρίτη αλληλεπίδραση]}} } 
+    \addcontentsline{toc}{section}{\protect\numberline{}2.6 \hspace{0.1cm} Scene 6 [Τρίτη αλληλεπίδραση]}
+    
+    \begin{itemize}
+        \item \textbf{LOCATION}: Aristotle University of Thessaloniki, School of Electrical and Computer Engineering AUTH, Lecture Hall A5
+        \item \textbf{TIME}: Morning
+        \item \textbf{CAMERA}: Canon EOS  250D, Nikon D3300
+        \item \textbf{AUDIO}: 
+            \begin{enumerate}
+                \item Shotgun condenser mic with balanced XLR cable
+                \item Boom pole
+                \item UR22mkII USB Audio Interface
+                \item MacBook Air M2, 8 Cores, 16GB, SSD
+                \item Beyerdynamic DT 770 PRO (32 Ohm) dynamic, closed-back headset
+            \end{enumerate}
+        \item \textbf{LIGHTING}: Natural Lighting
+    \end{itemize}
+
+
+
+    \vspace{0.5cm}
+    \subsection*{ \uline{\uline{\textbf{Scene 7} [Τέταρτη αλληλεπίδραση]}} } 
+    \addcontentsline{toc}{section}{\protect\numberline{}2.7 \hspace{0.1cm} Scene 7 [Τέταρτη αλληλεπίδραση]}
+
+    \begin{itemize}
+        \item \textbf{LOCATION}: Aristotle University of Thessaloniki, School of Electrical and Computer Engineering AUTH, Lecture Hall A5
+        \item \textbf{TIME}: Morning
+        \item \textbf{CAMERA}: Canon EOS  250D, Nikon D3300 
+        \item \textbf{AUDIO}: 
+            \begin{enumerate}
+                \item Shotgun condenser mic with balanced XLR cable
+                \item Boom pole
+                \item UR22mkII USB Audio Interface
+                \item MacBook Air M2, 8 Cores, 16GB, SSD
+                \item Beyerdynamic DT 770 PRO (32 Ohm) dynamic, closed-back headset
+            \end{enumerate}
+        \item \textbf{LIGHTING}: Natural Lighting
+    \end{itemize}
+
+    
+    
+    \vspace{0.5cm}
+    \subsection*{ \uline{\uline{\textbf{Scene 8} [Ειδοποίηση]}} } 
+    \addcontentsline{toc}{section}{\protect\numberline{}2.8 \hspace{0.1cm} Scene 8 [Ειδοποίηση]}
+    
+    \begin{itemize}
+        \item \textbf{LOCATION}: Aristotle University of Thessaloniki, School of Electrical and Computer Engineering AUTH, Lecture Hall A5
+        \item \textbf{TIME}: Morning
+        \item \textbf{CAMERA}: Canon EOS  250D, Nikon D3300
+        \item \textbf{AUDIO}: 
+            \begin{enumerate}
+                \item Shotgun condenser mic with balanced XLR cable
+                \item Boom pole
+                \item UR22mkII USB Audio Interface
+                \item MacBook Air M2, 8 Cores, 16GB, SSD
+                \item Beyerdynamic DT 770 PRO (32 Ohm) dynamic, closed-back headset
+            \end{enumerate}
+        \item \textbf{LIGHTING}: Natural Lighting
+    \end{itemize}
+    
+    
+
+
+     \newpage
+    \subsection*{ \uline{\uline{\textbf{Scene 9} [Breaking News στο λάπτοπ ενός φοιτητή]}} }
+    \addcontentsline{toc}{section}{\protect\numberline{}2.9 \hspace{0.1cm} Scene 9 [Breaking News]}
+
+    \begin{itemize}
+        \item \textbf{LOCATION}: Aristotle University of Thessaloniki, School of Electrical and Computer Engineering AUTH, Lecture Hall A5
+        \item \textbf{TIME}: Morning
+        \item \textbf{CAMERA}: Canon EOS  250D, Nikon D3300
+        \item \textbf{AUDIO}: 
+            \begin{enumerate}
+                \item Shotgun condenser mic with balanced XLR cable
+                \item Boom pole
+                \item UR22mkII USB Audio Interface
+                \item MacBook Air M2, 8 Cores, 16GB, SSD
+                \item Beyerdynamic DT 770 PRO (32 Ohm) dynamic, closed-back headset
+            \end{enumerate}
+        \item \textbf{LIGHTING}: Natural Lighting
+    \end{itemize}
+
+
+
+   \vspace{0.4cm}
+    \subsection*{ \uline{\uline{\textbf{Extra} [Breaking News Content] }} } 
+    \addcontentsline{toc}{section}{\protect\numberline{}2.10 \hspace{0.1cm} Extra [Breaking News Content]} 
+
+    \begin{itemize}
+        \item \textbf{LOCATION}: AUTH School of Journalism and Mass Communications Studio
+        \item \textbf{CAMERA}:
+            \begin{enumerate}
+                \item Nikon D3300
+                \item iPhone 15 Pro Max
+            \end{enumerate}
+        \item \textbf{AUDIO}: 
+            \begin{enumerate}
+                \item Lapel mic with wireless transmitter and receiver
+                \item UR22mkII USB Audio Interface
+                \item MacBook Air M2, 8 Cores, 16GB, SSD
+                \item Beyerdynamic DT 770 PRO (32 Ohm) dynamic, closed-back headset
+            \end{enumerate}
+        \item \textbf{LIGHTING}:
+            \begin{enumerate}
+                \item Incandescent Light 1000W No.1 with diffuser and tripod [Key Light]
+                \item Incandescent Light 1000W No.2 with diffuser and tripod [Fill Light]
+                \item Incandescent light 500W with tripod [Back Light]
+            \end{enumerate}
+        \item \textbf{PROPS}: Green Screen (AUTH School of Journalism and Mass Communications Studio)   
+    \end{itemize} 
+
+
+
+\vspace{2cm}
+\section{Sequence 3}
+
+    
+    \vspace{0.2cm}
+    \subsection*{ \uline{\uline{\textbf{Scene 1} [Η Ανακάλυψη]}} } 
+    \addcontentsline{toc}{section}{\protect\numberline{}3.1 \hspace{0.1cm} Scene 1 [Η Ανακάλυψη]}
+    
+    \begin{itemize}
+        \item \textbf{LOCATION}: Private Residence No. 2
+        \item \textbf{TIME}: Morning
+        \item \textbf{CAMERA}: Canon EOS  250D, Nikon D3300
+        \item \textbf{AUDIO}: 
+            \begin{enumerate}
+                \item Shotgun condenser mic with balanced XLR cable
+                \item Boom pole
+                \item UR22mkII USB Audio Interface
+                \item MacBook Air M2, 8 Cores, 16GB, SSD
+                \item Beyerdynamic DT 770 PRO (32 Ohm) dynamic, closed-back headset
+            \end{enumerate}
+        \item \textbf{LIGHTING}:
+            \begin{enumerate}
+                \item Incandescent Light 1000W with diffuser and tripod [x2 items]
+                \item Incandescent light 500W with tripod
+            \end{enumerate}  
+    \end{itemize}
+
+    
+    
+    \vspace{0.5cm}
+    \subsection*{ \uline{\uline{\textbf{Scene 2} [Η Απόφαση]}} } 
+    \addcontentsline{toc}{section}{\protect\numberline{}3.2 \hspace{0.1cm} Scene 2 [Η Απόφαση]}
+    
+    \begin{itemize}
+        \item \textbf{LOCATION}: Private Residence No. 2
+        \item \textbf{TIME}: Morning
+        \item \textbf{CAMERA}: Canon EOS  250D, Nikon D3300
+        \item \textbf{AUDIO}: 
+            \begin{enumerate}
+                \item Shotgun condenser mic with balanced XLR cable
+                \item Boom pole
+                \item UR22mkII USB Audio Interface
+                \item MacBook Air M2, 8 Cores, 16GB, SSD
+                \item Beyerdynamic DT 770 PRO (32 Ohm) dynamic, closed-back headset
+            \end{enumerate}
+        \item \textbf{LIGHTING}:
+            \begin{enumerate}
+                \item Incandescent Light 1000W with diffuser and tripod [x2 items]
+                \item Incandescent light 500W with tripod
+            \end{enumerate}  
+    \end{itemize}
+
+    
+
+\end{document}
